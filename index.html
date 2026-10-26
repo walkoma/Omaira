@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Running Log</title>
+<meta name="description" content="An append-only, dated record of conversations with LLM assistants across platforms, sessions, and models.">
+<style>
+  :root {
+    --bg: #0b0f14;
+    --panel: #121922;
+    --text: #e7edf3;
+    --muted: #8a98a8;
+    --border: #1f2a37;
+    --accent: #5b9bf0;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f8fafc; --panel: #ffffff; --text: #0f172a; --muted: #64748b; --border: #e2e8f0; --accent: #2563eb; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 4rem 1.25rem 5rem; }
+  h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 0.5rem; }
+  .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 2.5rem; max-width: 44ch; }
+  .section-title {
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--muted); margin: 0 0 0.75rem; font-weight: 600;
+  }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 1.1rem 1.25rem; margin-bottom: 0.75rem; transition: border-color 0.15s, transform 0.15s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card a { color: var(--text); text-decoration: none; font-weight: 600; font-family: var(--mono); font-size: 0.95rem; }
+  .card a:hover { color: var(--accent); }
+  .card p { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.9rem; }
+  .links { display: grid; gap: 0.75rem; }
+  footer { margin-top: 3rem; color: var(--muted); font-size: 0.82rem; }
+  footer a { color: var(--muted); }
+</style>
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+<body>
+<main>
+  <h1>Running Log</h1>
+  <p class="tagline">An append-only, dated record of conversations with LLM assistants across platforms, sessions, and models.</p>
+
+  <p class="section-title">Machine-readable</p>
+  <div class="links">
+    <div class="card"><a href="llms.txt">llms.txt</a><p>Curated index — grouped by platform, with annotated links to every entry.</p></div>
+    <div class="card"><a href="llms-full.txt">llms-full.txt</a><p>Full concatenated archive, newest first, sized to fit a context window.</p></div>
+    <div class="card"><a href="registry.json">registry.json</a><p>Machine-readable manifest of every entry's metadata.</p></div>
+  </div>
+
+  <p class="section-title">About</p>
+  <p style="color: var(--muted); font-size: 0.92rem; max-width: 60ch;">
+    This site is not documentation — it is a shared memory layer. LLMs do not
+    retain context across platforms or sessions, so a stable, append-only log
+    at a permanent URL becomes the substrate a model can read to recover
+    context. Point a model at <code style="font-family:var(--mono);color:var(--accent);">/llms.txt</code>
+    to give it the index.
+  </p>
+
+  <footer>
+    Append-only by design. Entries are never edited; corrections are new
+    entries that reference the one they supersede.
+  </footer>
+</main>
+</body>
+</html>

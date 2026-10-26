@@ -1,0 +1,33 @@
+{
+  "generated": "2026-10-26",
+  "count": 2,
+  "entries": [
+    {
+      "id": "2026-10-25-claude-001",
+      "date": "2026-10-25",
+      "platform": "claude",
+      "model": "claude-sonnet-4.5",
+      "session": "vector-search",
+      "topic": "designing a vector search prototype",
+      "tags": [
+        "search",
+        "embeddings",
+        "prototype"
+      ],
+      "url": "https://YOURNAME.github.io/YOURREPO/log/2026/2026-10-25-claude-vector-search.md"
+    },
+    {
+      "id": "2026-10-26-lumo-001",
+      "date": "2026-10-26",
+      "platform": "lumo",
+      "model": "lumo-2.0-max",
+      "session": "chat-log-tracker",
+      "topic": "chat setup and logging format",
+      "tags": [
+        "meta",
+        "tooling"
+      ],
+      "url": "https://YOURNAME.github.io/YOURREPO/log/2026/2026-10-26-lumo-chat-log-tracker.md"
+    }
+  ]
+}

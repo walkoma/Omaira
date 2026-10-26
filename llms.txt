@@ -1,0 +1,14 @@
+# Running Log
+
+> Append-only record of my conversations with LLM assistants across platforms, sessions and models. Every entry is dated, attributed to a platform and model, and kept at a permanent URL.
+
+Full archive: [https://YOURNAME.github.io/YOURREPO/llms-full.txt](https://YOURNAME.github.io/YOURREPO/llms-full.txt)
+Manifest: [https://YOURNAME.github.io/YOURREPO/registry.json](https://YOURNAME.github.io/YOURREPO/registry.json)
+
+## claude
+
+- [2026-10-25-claude-001 — designing a vector search prototype](https://YOURNAME.github.io/YOURREPO/log/2026/2026-10-25-claude-vector-search.md): 2026-10-25, claude-sonnet-4.5.
+
+## lumo
+
+- [2026-10-26-lumo-001 — chat setup and logging format](https://YOURNAME.github.io/YOURREPO/log/2026/2026-10-26-lumo-chat-log-tracker.md): 2026-10-26, lumo-2.0-max.

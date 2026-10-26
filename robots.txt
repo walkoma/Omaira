@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# llms.txt is an emerging convention (proposed 2024) for making a site
+# machine-readable. AI search crawlers and Google Search ignore it, so
+# this file is primarily for explicit fetches by models pointed at it.
+# See: https://llmstxt.org

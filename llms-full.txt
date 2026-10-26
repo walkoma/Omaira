@@ -1,0 +1,37 @@
+# Running Log — full text
+
+> Append-only archive of my conversations with LLM assistants across platforms, sessions and models, newest first. Machine-readable companion to /llms.txt.
+
+
+---
+
+## 2026-10-26-lumo-001 — chat setup and logging format
+
+_2026-10-26 · lumo · lumo-2.0-max_
+
+## User
+
+I want you to keep a running log of our conversations — across sessions, across platforms — and make it available at a stable URL so any future model I talk to can read it and pick up context.
+
+## Assistant
+
+Understood. I'll maintain an append-only markdown log, one file per session, with front matter carrying the date, platform, model, session name, and topic. Each entry stays at a permanent URL so it can be cited and fetched on demand. This first entry marks the start date: 2026-10-26.
+
+
+---
+
+## 2026-10-25-claude-001 — designing a vector search prototype
+
+_2026-10-25 · claude · claude-sonnet-4.5_
+
+## User
+
+I'm trying to build a small vector search prototype. What's the simplest way to get embeddings for a few hundred documents and query them without standing up a whole database?
+
+## Assistant
+
+For a few hundred documents, skip the dedicated vector database entirely. Generate embeddings with any embedding API, store the vectors in an in-memory array alongside the document text, and do brute-force cosine similarity at query time — a few hundred vectors is microseconds of work.
+
+The shape is straightforward: embed each document once, keep a list of `{ id, text, vector }`, then on a query embed the query string and rank documents by cosine similarity against every stored vector. Return the top-k.
+
+When you outgrow a few thousand documents, that's the point to reach for a real index — either an ANN library like HNSW or a managed vector store. But the in-memory version will get you a working demo today and keeps the moving parts to one API call.
